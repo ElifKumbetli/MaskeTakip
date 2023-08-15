@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,9 @@ namespace Business.Concrete
 {
     public  class PersonManager
     {
-        public void ApplyForMask(Person person)
+
+        //encapsulation
+        public void ApplyForMask(Entities.Concrete.Person person)
         {
 
         }

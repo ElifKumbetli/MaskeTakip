@@ -1,48 +1,35 @@
 ﻿namespace Workaround
 {
-    internal class Program
-    {
+     class Program
+     {
         static void Main(string[] args)
         {
-            //Degiskenler();
 
-            Vatandas vatandas1 = new Vatandas();
-            vatandas1.
-            
+            SelamVer(isim : "Engin");
+            SelamVer(isim : "Ahmet");
+            SelamVer(isim: "Ayşe");
+            SelamVer();
+
+
+            int sonuc = Topla(6,58);
+
+
 
             Console.ReadLine();
         }
 
-        private static void Degiskenler()
+        static void SelamVer(string isim = "isimsiz")
         {
-            string mesaj = "Merhaba";
-            double tutar = 100000; //db den gelir
-            int sayi = 100;
-            bool girisYapmisMi = false;
+            Console.WriteLine("Merhaba " + isim);
+        }
 
-            string ad = "Engin";
-            string soyad = "Demiroğ";
-            int dogumYili = 1985;
-            long tcNo = "12345678910";
-
-
-
-        Console.WriteLine(tutar * 1.18);
-
-        Console.WriteLine(tutar * 1.18);
+        static int Topla(int sayi1 = 5, int sayi2= 10)
+        {
+            int sonuc = sayi1 + sayi2;
+            Console.WriteLine("Toplam : "+ sonuc.ToString());
+            return sonuc;
         }
     }
-
-    //pascal casing
-
-    public class Vatandas
-    {
-        public string Ad { get; set; }
-
-        public string Soyad { get; set; }
-
-        public int DogumYili { get; set; }
-
-        public long TcNo { get; set; }
-    }
 }
+
+ 
