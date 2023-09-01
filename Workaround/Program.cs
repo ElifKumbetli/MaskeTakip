@@ -46,7 +46,7 @@ namespace Workaround
             sehirler2 = sehirler1;
             sehirler1[0] = "Adana";
             Console.WriteLine(sehirler2[0]);
-            
+                       
                     
 
             Person person1 = new Person();
@@ -66,6 +66,10 @@ namespace Workaround
             {
                 Console.WriteLine(sehir);
             }
+
+            PttManager pttManager = new PttManager(new ForeignerManager());
+            pttManager.GiveMask(person1);
+          
 
             Console.ReadLine();
         }

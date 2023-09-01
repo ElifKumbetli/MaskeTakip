@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Business.Absract;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +8,21 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class PttManager
+    public class PttManager:ISupplierService
     {
+    private  IApplicantService _applicantService;
+
+        public PttManager(IApplicantService applicantService) // Constructor --> Oluşturucu
+            //new yapıldığında önce çalışır
+        {
+            _applicantService = applicantService;
+        }
+
         public void GiveMask(Person person)
         {
-            PersonManager personManager = new PersonManager();
-            if (personManager.CheckPerson(person) == true)
+            if (_applicantService.CheckPerson(person))
             {
                 Console.WriteLine(person.Firstname + "için maske verildi");
-
             }
         }
     }
