@@ -30,7 +30,10 @@ namespace Business.Concrete
             //mernis kontrolü yapılacak
             KPSPublicSoapClient client = new MernisServiceReference.KPSPublicSoapClient(MernisServiceReference.KPSPublicSoapClient.EndpointConfiguration.KPSPublicSoap);
 
-                return  ClientCertificateOption.TcKimlikDogrulaAsync(new TCKimlikNoDogrulaRequestBody(123,"ENGİN","DEMİROĞ",1985);
+                return  client.TCKimlikNoDogrulaAsync(
+                    new TCKimlikNoDogrulaRequest
+                    (new TCKimlikNoDogrulaRequestBody(person.NationalIdentity, person.FirstName, person.LastName, person.DateOfBirthYear)))
+                    .Result.Body.TCKimlikNoDogrulaResult;
            
 
         }

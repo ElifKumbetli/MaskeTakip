@@ -24,6 +24,10 @@ namespace Business.Concrete
             {
                 Console.WriteLine(person.Firstname + "için maske verildi");
             }
+            else {
+                Console.WriteLine(person.Firstname + " için maske VERİLEMEDİ");
+
+            }
         }
     }
 }
